@@ -68,7 +68,7 @@ for (let i = 0; i < selectItems.length; i++) {
   selectItems[i].addEventListener("click", function () {
 
 
-    let selectedValue = normalizeCategory(this.innerText);
+    let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
     elementToggleFunc(select);
     filterFunc(selectedValue);
@@ -103,7 +103,7 @@ for (let i = 0; i < filterBtn.length; i++) {
   filterBtn[i].addEventListener("click", function () {
 
 
-    let selectedValue = normalizeCategory(this.innerText);
+    let selectedValue = this.innerText.toLowerCase();
     selectValue.innerText = this.innerText;
     filterFunc(selectedValue);
 
