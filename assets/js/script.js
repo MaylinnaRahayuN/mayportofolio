@@ -68,7 +68,7 @@ for (let i = 0; i < selectItems.length; i++) {
   selectItems[i].addEventListener("click", function () {
 
 
-    let selectedValue = this.innerText.toLowerCase();
+    let selectedValue = this.dataset.filter ?? "all";
     selectValue.innerText = this.innerText;
     elementToggleFunc(select);
     filterFunc(selectedValue);
@@ -103,10 +103,10 @@ for (let i = 0; i < filterBtn.length; i++) {
   filterBtn[i].addEventListener("click", function () {
 
 
-    let selectedValue = this.innerText.toLowerCase();
+
+    let selectedValue = this.dataset.filter ?? "all";
     selectValue.innerText = this.innerText;
     filterFunc(selectedValue);
-
     lastClickedBtn.classList.remove("active");
     this.classList.add("active");
     lastClickedBtn = this;
